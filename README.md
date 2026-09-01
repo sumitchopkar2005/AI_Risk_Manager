@@ -203,8 +203,8 @@ razorpay-ai-risk-manager/
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/IshanGain/razorpay-ai-risk-manager
-cd razorpay-ai-risk-manager
+git clone https://github.com/sumitchopkar2005/AI_Risk_Manager.git
+cd AI_Risk_Manager
 
 # 2. Create virtual environment
 python -m venv venv
@@ -557,9 +557,9 @@ Never commit `.env` to version control. It is listed in `.gitignore`.
 
 ## Author
 
-**Ishan Gain**
+**Sumit Chopkar**
 AI Buildathon 2026 — Track 02: AI Risk Manager
-GitHub: [IshanGain](https://github.com/IshanGain)
+GitHub: [SumitChopkar](https://github.com/sumitchopkar2005)
 
 ---
 
