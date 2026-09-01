@@ -1,0 +1,52 @@
+# ═══════════════════════════════════════════════════════════════════════════
+# AI Risk Manager - Render Deployment Configuration
+# ═══════════════════════════════════════════════════════════════════════════
+# Deploys two services: API Server & Monitoring Dashboard
+# Updated: 2026-09-01
+
+services:
+  # ───────────────────────────────────────────────────────────────────────────
+  # FastAPI Inference Server
+  # ───────────────────────────────────────────────────────────────────────────
+  - type: web
+    name: ai-risk-manager-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn api.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      # Razorpay Credentials (set in Render Dashboard)
+      - key: RAZORPAY_KEY_ID
+        sync: false
+      - key: RAZORPAY_KEY_SECRET
+        sync: false
+      
+      # API Configuration
+      - key: API_ENVIRONMENT
+        value: production
+      - key: LOG_LEVEL
+        value: INFO
+      - key: ENABLE_AUDIT_TRAIL
+        value: "true"
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # Streamlit Monitoring Dashboard
+  # ───────────────────────────────────────────────────────────────────────────
+  - type: web
+    name: ai-risk-manager-dashboard
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run dashboard/app.py --server.port $PORT --server.address 0.0.0.0
+    envVars:
+      # Razorpay Credentials (set in Render Dashboard)
+      - key: RAZORPAY_KEY_ID
+        sync: false
+      - key: RAZORPAY_KEY_SECRET
+        sync: false
+      
+      # Dashboard Configuration
+      - key: API_BASE
+        sync: false  # Set to your API URL in Render Dashboard
+      - key: DASHBOARD_ENVIRONMENT
+        value: production
+      - key: LOG_LEVEL
+        value: INFO
