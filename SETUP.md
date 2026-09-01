@@ -69,8 +69,8 @@ Then edit `.env` with your credentials:
 
 ```env
 # Razorpay Test Mode (from your Razorpay dashboard)
-RAZORPAY_KEY_ID=rzp_test_TWr4fta9oXjr7X
-RAZORPAY_KEY_SECRET=gUmodDq44vUvZwKk1pj2Fsom
+RAZORPAY_KEY_ID=rzp_test_YOUR_KEY_ID_HERE
+RAZORPAY_KEY_SECRET=YOUR_KEY_SECRET_HERE
 
 # Local API settings
 API_BASE=http://localhost:8000

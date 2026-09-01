@@ -19,8 +19,8 @@ This document details all credentials required to run the AI Risk Manager projec
 
 | Key | Example | Status |
 |-----|---------|--------|
-| `RAZORPAY_KEY_ID` | `rzp_test_TWr4fta9oXjr7X` | ✅ Provided |
-| `RAZORPAY_KEY_SECRET` | `gUmodDq44vUvZwKk1pj2Fsom` | ✅ Provided |
+| `RAZORPAY_KEY_ID` | `rzp_test_YOUR_TEST_KEY_ID` | ℹ️ Get from Razorpay |
+| `RAZORPAY_KEY_SECRET` | `YOUR_TEST_KEY_SECRET` | ℹ️ Get from Razorpay |
 
 **Security Notes:**
 - 🔒 NEVER share these keys
@@ -30,8 +30,8 @@ This document details all credentials required to run the AI Risk Manager projec
 
 **Your Test Credentials:**
 ```env
-RAZORPAY_KEY_ID=rzp_test_TWr4fta9oXjr7X
-RAZORPAY_KEY_SECRET=gUmodDq44vUvZwKk1pj2Fsom
+RAZORPAY_KEY_ID=rzp_test_YOUR_KEY_ID_HERE
+RAZORPAY_KEY_SECRET=YOUR_KEY_SECRET_HERE
 ```
 
 ---
@@ -45,8 +45,8 @@ RAZORPAY_KEY_SECRET=gUmodDq44vUvZwKk1pj2Fsom
 
 ```env
 # Razorpay Test Credentials
-RAZORPAY_KEY_ID=rzp_test_TWr4fta9oXjr7X
-RAZORPAY_KEY_SECRET=gUmodDq44vUvZwKk1pj2Fsom
+RAZORPAY_KEY_ID=rzp_test_YOUR_KEY_ID_HERE
+RAZORPAY_KEY_SECRET=YOUR_KEY_SECRET_HERE
 
 # API Settings
 API_BASE=http://localhost:8000
